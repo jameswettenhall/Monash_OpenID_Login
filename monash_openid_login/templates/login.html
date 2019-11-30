@@ -5,10 +5,11 @@
     <head>
         <link href="{% static 'monash/css/default.css' %}" rel="stylesheet">
     </head>
+    <br>
     <legend style="text-align: center"> Log In to Store.Monash</legend>
-    <div class="container-fluid">
-        <div class="row monash-flexbox">
-          <div class="col-md-6 login-box" style="margin: 2%;">
+    <div class="container">
+        <div class="row">
+          <div class="offset-md-1 col-md-5 login-box" style="margin: 2%;">
             <form action="" method="post" class="form-horizontal" style="padding-top: 20px ; ">
                 {% csrf_token %}
                 <input name="next_page" type="hidden" value="{{ next_page }}" />
@@ -21,7 +22,7 @@
                 {{ loginForm|bootstrap_horizontal:'col-md-2' }}
                 <div class="form-group">
                   <div class="col-md-offset-2 col-md-8">
-                    <button type="submit" class="btn btn-info btn-small">
+                    <button type="submit" class="btn btn-primary btn-sm ml-0">
                         <i class="fa fa-sign-in"></i> Log In
                      </button>
                   </div>
@@ -29,7 +30,7 @@
             </form>
           </div>
 
-          <div class="col-md-6 login-box" style="margin: 2%;">
+          <div class="col-md-5 login-box" style="margin: 2%;">
               <img src="{% static 'monash/images/aaf-logo.png' %}"
                    style="max-width: 50%" class="center-image">
               <p class="login-text">Log In using your University ID</p>
@@ -38,7 +39,7 @@
                        src="{% static 'monash/images/aaf_service.png' %}" />
               </a>
           </div>
-        </div>  <!-- class="row monash-flexbox" -->
+        </div>  <!-- class="row" -->
     </div>
     <div class="container-fluid footer-text">
         <p><strong>New User?</strong> If you don't have an account yet, logging in with any of these methods will create
